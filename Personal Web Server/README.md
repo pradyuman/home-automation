@@ -19,7 +19,7 @@ Things that are cool but aren't needed:
 
 If you need a more general setup guide or some more help setting up your RPi, go [here] (https://www.raspberrypi.org/help/quick-start-guide/). 
 
-**Setup Instructions:**
+#Setup Instructions:
 
 * Make sure everything is up to date by running:
 
