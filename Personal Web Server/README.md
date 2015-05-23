@@ -68,7 +68,7 @@ If you need a more general setup guide or some more help setting up your RPi, go
 
    This is the most independent section of this guide; you'll need to search up how to enable inbound traffic or port forwarding for your specific router and ISP configuration. Don't worry, there are plenty of guides online if you search on any search engine.
 
-**Getting a Domain Name**
+**Getting a Domain Name:**
 
 * If you were able to get through the last step, your website is now accessible from the world wide internet network... if someone has your RPi's external facing IP address. To enable other people to access your website using a xxx.domain.xxx (a much more conventional method), we will use a dynamic domain name server (dynamic DNS) service.
 
@@ -78,17 +78,34 @@ If you need a more general setup guide or some more help setting up your RPi, go
    
    **100% Free Method:**
 
-   *This section is only for those who do not have a domain name already registered and just want some sort of readable domain (this name will not be pretty). If you want to use a personally registered domain (something you registered or will register on GoDaddy, Namecheap, etc), skip to the section labeled "Dynamic DNS for Registered Domains".*
+   *This section is only for those who do not have a domain name already registered and just want some sort of readable domain (this name will not be pretty). If you want to use a personally registered domain (something you registered or will register on GoDaddy, Namecheap, etc), skip to the section labeled "Dynamic DNS for Registered Domains".
    
-   There are many different free dynamic DNS websites (DNSdynamic and No-IP to name a few). I'll explain how to use [DNSdynamic](www.dnsdynamic.org) because I think it is the one that takes the least effort.
+   There are many different free dynamic DNS websites (DNSdynamic and No-IP to name a couple). I'll explain how to use [DNSdynamic](www.dnsdynamic.org) because I think it is the one that takes the least effort.
 
       1. Sign up for DNSdynamic at www.dnsdynamic.org and secure an available domain (it will look something like xxxxxxxx.dnsdynamic.org"
       2. DNSdynamic will tell you your current external facing IP address. If you are signing up from a computer different than the Raspberry Pi, then make sure to find the external facing IP address of your raspberry pi (using something like http://www.whatsmyip.org) and enter that IP address in the boxes.
-      3. At this point, your dnsdynamic.org address isn't really dynamic. If your IP changes, nothing is currently updating that into the dnsdynamic.org database (unless you do it by hand). To fix this, download [ddclient](http://sourceforge.net/p/ddclient/wiki/Home/) onto your Raspberry Pi and follow the instructions on that website to configure it onto your Raspberry Pi.
-      4. Once that is complete, wait for about an hour (this is VERY much on the safe side, a lot of times it just takes a few minutes for everything to work) and check your xxxxx.dnsdynamic.org website to make sure that the website currently in your `/var/www` directory on your Raspberry Pi is loaded in your web browser.
+      3. At this point, your dnsdynamic.org address isn't really dynamic. If your IP changes, nothing is currently updating that into the dnsdynamic.org database (unless you do it by hand). To fix this, download [ddclient](http://sourceforge.net/p/ddclient/wiki/Home/) onto your Raspberry Pi and follow the instructions on that website to configure it.
+      4. Once that is complete, wait for about an hour (this is VERY much on the safe side, a lot of times it just takes a few minutes for everything to work) and then enter your xxxxx.dnsdynamic.org website into a web browser to make sure that the website currently in your `/var/www` directory on your Raspberry Pi is loaded in your web browser.
 
-   **Dynamic DNS for Registered Domains**
+   **Dynamic DNS for Registered Domains:**
 
-   There are many different paid dynamic DNS websites (which is what you will need if you want to use your own domain). I'll explain how to use [No-IP](www.noip.com) because it's the one I ended up using.
+   There are many different paid dynamic DNS websites (No-IP and dyndns to name a couple), which is what you will need if you want to use your own domain. I'll explain how to use [No-IP](www.noip.com) because it's the one I ended up using.
 
-      1. 
+      1. Register your domain at whatever domain provider you want to use (for example GoDaddy or Namecheap).
+      2. Navigate to the [No-IP dynamic DNS product page](http://www.noip.com/remote-access), click on "Free Sign Up", and create/verify an account.
+      3. Click on "Add My Domain" and fill out the form using the domain name you registered (this should be headlined with "Add Plus Managed DNS").
+      4. Once you have added the domain and paid No-IP, you should get an email with a list of their nameservers and static IPs associated with each name server (the nameserver looks like a normal URL).
+      5. Go to the domain management portal at the domain provider you chose and find the *nameservers* section (Do not confuse this section with the A record or CNAME record section).
+      6. Remove any of the nameservers currently on the list.
+      7. Add all the nameservers that No-IP gave you to the nameserver list. If No-IP gives you a nameserver address with both an IPv4 AND an IPv6 address, just register that nameserver using the IPv6 address.
+      8. At this point, your domain.xxxx address isn't really dynamic. If your IP changes, nothing is currently updating that into the No-IP database (unless you do it by hand). To fix this, download the [No-IP dynamic update client](http://www.noip.com/support/knowledgebase/installing-the-linux-dynamic-update-client-on-ubuntu/) onto your Raspberry Pi and follow the instructions on that website to configure it.
+      9. Wait for about an hour and then enter your domain name ("www.domain.xxxx" or "domain.xxxx") into a web browser to make sure that the website currently in your `/var/www` directory on your Raspberry Pi is loaded in your web browser.
+
+**What now?**
+
+If everthing was successful, you're done! You can change the website in your `/var/www` directory to whatever you want and it will show up on the world wide internet network whenever someone enters your domain into their web browser.
+
+You can now install [node.js](http://justplugin.co.uk/pi/nodejs/pi-nodejs.html) or [nginx](http://www.learn2crack.com/2013/10/setup-nginx-web-server-raspberry-pi-php-mysql.html) if you want.
+
+
+I am planning to use this in my home automation setup and I will explain in detail how I do this once I get everything set up and working.
