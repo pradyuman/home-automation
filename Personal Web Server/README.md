@@ -1,11 +1,11 @@
 # Raspberry Pi Personal Web Server
-I created a personal web server to display the control panel of my home automation server using a Raspberry Pi 2 Model B:
-
-![Raspberry Pi 2 Model B](images/rpi.jpg)
+I created a personal web server to display the control panel of my home automation server using a Raspberry Pi.
 
 What is needed:
 
-* Raspberry Pi (I used the RPi 2 Model B)
+* Raspberry Pi (I used the RPi 2 Model B:)
+  
+  ![Raspberry Pi 2 Model B](images/rpi.jpg)
 * An internet connection
 * A way to connect the RPi to the internet (via ethernet or wifi dongle)
 * A way to power your RPi
