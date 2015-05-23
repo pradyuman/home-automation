@@ -1,2 +1,10 @@
 # home-automation
-My home automation setup
+This repository contains all the parts and instructions of my home automation setup.
+
+It currently contains:
+
+* Personal Web Server
+
+If you want to replicate exactly what I have done, then visit the following folders in order (instructions are in the folder READMEs):
+
+* Personal Web Server
