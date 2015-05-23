@@ -11,6 +11,7 @@ What is needed:
 
 Things that are cool but aren't needed:
 
+* Secure Shell (SSH) access to your RPi
 * A registered domain name
 * Dynamic DNS service (explained later)
 
@@ -20,4 +21,9 @@ If you need a more general setup guide or some more help setting up your RPi, go
 
 Steps:
 
-1. 
+1. Make sure everything is up to date by running:
+
+```
+`sudo apt-get update`
+`sudo apt-get upgrade`
+```
