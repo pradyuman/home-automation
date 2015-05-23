@@ -21,33 +21,31 @@ If you need a more general setup guide or some more help setting up your RPi, go
 
 **Setup Instructions:**
 
-1. Make sure everything is up to date by running:
+* Make sure everything is up to date by running:
 
-```
-sudo apt-get update
-sudo apt-get upgrade
-```
-
+  ```
+  sudo apt-get update
+  sudo apt-get upgrade
+  ```
+  
 **Installing Web Server software:**
 
-2. I set up my web server using Apache Web server software during my intial setup. It is quick and fast and is a good way to test if everything is running properly. You can install node.js, nginx, or other web server software once you have tested that all your networking and basic setup is working (node.js in particular takes a few hours to compile and install and is not an efficient way to start). Run the following command to install apache, php, and a library that help Apache work with PHP:
+* I set up my web server using Apache Web server software during my intial setup. It is quick and fast and is a good way to  test if everything is running properly. You can install node.js, nginx, or other web server software once you have tested that all your networking and basic setup is working (node.js in particular takes a few hours to compile and install and is not an efficient way to start). Run the following command to install apache, php, and a library that help Apache work with PHP:
 
-```
-sudo apt-get install apache2 php5 libapache2-mod-php5
-```
+  ```
+  sudo apt-get install apache2 php5 libapache2-mod-php5
+  ```
 
-3. Once Apache is finished installing, go to your web browser (on the RPi or a computer attached to the same network) and type in your RPi's local IP address. To find this ip address, run `ifconfig` and look for *inet address*. This number is your RPi's local IP address. If there were no issues with your setup, a basic web site should load (headlined with "It works!"). If this does not show up, restart the apache service using the following command:
+* Once Apache is finished installing, go to your web browser (on the RPi or a computer attached to the same network) and type in your RPi's local IP address. To find this ip address, run `ifconfig` and look for *inet address*. This number is your RPi's local IP address. If there were no issues with your setup, a basic web site should load (headlined with "It works!"). If this does not show up, restart the apache service using the following command:
 
-```
-sudo service apache2 restart
-```
+  ```
+  sudo service apache2 restart
+  ```
 
-If it still does not work, try uninstalling and reinstalling apache using the following commands:
+  If it still does not work, try uninstalling and reinstalling apache using the following commands:
 
-```
-sudo apt-get --purge remove apache2 php5 libapache2-mod-php5
-sudo apt-get autoremove --purge
-sudo apt-get install apache2 php5 libapache2-mod-php5
-```
-
-4.
+  ```
+  sudo apt-get --purge remove apache2 php5 libapache2-mod-php5
+  sudo apt-get autoremove --purge
+  sudo apt-get install apache2 php5 libapache2-mod-php5
+  ```
