@@ -1,5 +1,7 @@
 # Raspberry Pi Personal Web Server
-I created a personal web server to display the control panel of my home automation server.
+I created a personal web server to display the control panel of my home automation server using a Raspberry Pi 2 Model B+:
+
+![Raspberry Pi 2 Model B+](/images/rpi.png)
 
 What is needed:
 
@@ -49,3 +51,5 @@ If you need a more general setup guide or some more help setting up your RPi, go
   sudo apt-get autoremove --purge
   sudo apt-get install apache2 php5 libapache2-mod-php5
   ```
+
+*
