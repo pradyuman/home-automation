@@ -7,4 +7,4 @@ It currently contains:
 
 If you want to replicate exactly what I have done, then visit the following folders in order (instructions are in the folder READMEs):
 
-* Personal Web Server
+1. Personal Web Server
