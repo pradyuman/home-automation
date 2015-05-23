@@ -1,7 +1,7 @@
 # Raspberry Pi Personal Web Server
 I created a personal web server to display the control panel of my home automation server using a Raspberry Pi 2 Model B+:
 
-![Raspberry Pi 2 Model B+](/images/rpi.png)
+![Raspberry Pi 2 Model B+](images/rpi.png)
 
 What is needed:
 
@@ -32,13 +32,17 @@ If you need a more general setup guide or some more help setting up your RPi, go
   
 **Installing Web Server software:**
 
-* I set up my web server using Apache Web server software during my intial setup. It is quick and fast and is a good way to  test if everything is running properly. You can install node.js, nginx, or other web server software once you have tested that all your networking and basic setup is working (node.js in particular takes a few hours to compile and install and is not an efficient way to start). Run the following command to install apache, php, and a library that help Apache work with PHP:
+*   I set up my web server using Apache Web server software during my intial setup. It is quick and fast and is a good way to  test if everything is running properly. You can install node.js, nginx, or other web server software once you have tested that all your networking and basic setup is working (node.js in particular takes a few hours to compile and install and is not an efficient way to start). Run the following command to install apache, php, and a library that help Apache work with PHP:
 
   ```
   sudo apt-get install apache2 php5 libapache2-mod-php5
   ```
 
-* Once Apache is finished installing, go to your web browser (on the RPi or a computer attached to the same network) and type in your RPi's local IP address. To find this ip address, run `ifconfig` and look for *inet address*. This number is your RPi's local IP address. If there were no issues with your setup, a basic web site should load (headlined with "It works!"). If this does not show up, restart the apache service using the following command:
+*   Once Apache is finished installing, go to your web browser (on the RPi or a computer attached to the same network) and type in your RPi's local IP address. To find this ip address, run `ifconfig` and look for *inet address*. This number is your RPi's local IP address. If there were no issues with your setup, a basic web site should load (headlined with "It works!"):
+   
+  ![Apache Default](images/apacheDefault.png)
+
+  If this does not show up, restart the apache service using the following command:
 
   ```
   sudo service apache2 restart
