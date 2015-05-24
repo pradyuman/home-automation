@@ -78,7 +78,7 @@ If you need a more general setup guide or some more help setting up your RPi, go
    
    **100% Free Method:**
 
-   *This section is only for those who do not have a domain name already registered and just want some sort of readable domain (this name will not be pretty). If you want to use a personally registered domain (something you registered or will register on GoDaddy, Namecheap, etc), skip to the section labeled "Dynamic DNS for Registered Domains".
+   *This section is only for those who do not have a domain name already registered and just want some sort of readable domain (this name will not be pretty). If you want to use a personally registered domain (something you registered or will register on GoDaddy, Namecheap, etc), skip to the section labeled "Dynamic DNS for Registered Domains".*
    
    There are many different free dynamic DNS websites (DNSdynamic and No-IP to name a couple). I'll explain how to use [DNSdynamic](www.dnsdynamic.org) because I think it is the one that takes the least effort.
 
@@ -105,7 +105,6 @@ If you need a more general setup guide or some more help setting up your RPi, go
 
 If everthing was successful, you're done! You can change the website in your `/var/www` directory to whatever you want and it will show up on the world wide internet network whenever someone enters your domain into their web browser.
 
-You can now install [node.js](http://justplugin.co.uk/pi/nodejs/pi-nodejs.html) or [nginx](http://www.learn2crack.com/2013/10/setup-nginx-web-server-raspberry-pi-php-mysql.html) if you want.
-
+You can now install [node.js](http://justplugin.co.uk/pi/nodejs/pi-nodejs.html), [nginx](http://www.learn2crack.com/2013/10/setup-nginx-web-server-raspberry-pi-php-mysql.html), or some different web server software if you want.
 
 I am planning to use this in my home automation setup and I will explain in detail how I do this once I get everything set up and working.
