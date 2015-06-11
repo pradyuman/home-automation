@@ -1,0 +1,27 @@
+#!/bin/bash
+
+WEBSERVER="/root/home-automation/Website/server.js"
+
+case "$1" in
+start)
+	/usr/local/bin/forever start $WEBSERVER
+    echo "asuna.io web server started"
+    ;;
+status)
+    /usr/local/bin/forever list
+    ;;
+stop)
+    /usr/local/bin/forever stopall
+    echo "asuna.io web server stopped"
+    ;;
+
+restart)
+  	/usr/local/bin/forever restartall
+    echo "asuna.io web server restarted"
+    ;;
+*)
+    echo "Usage: $0 {status|start|stop|restart}"
+    exit 1
+esac
+
+exit 0
