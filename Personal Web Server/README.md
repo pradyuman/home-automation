@@ -62,7 +62,7 @@ If you need a more general setup guide or some more help setting up your RPi, go
 
 *This section will vary for everyone depending on your router and internet service provider.*
 
-* Right now, this website can only be accessed by a device on the local area network. To get this on the world wide internet network, you'll need to enable inbound traffic at port 80 (the standard http port) of your raspberry pi through your router settings page (commonly accessed by enetering the gateway address of your network).
+* Right now, this website can only be accessed by a device on the local area network. To get this on the world wide internet network, you'll need to enable inbound traffic at port 80 (the standard http port) of your raspberry pi through your router settings page (commonly accessed by entering the gateway address of your network).
 
    If your internet service provider does not allow inbound traffic at port 80 for some reason, you'll need to enable port forwarding on your router and forward all traffic at port 80 of your raspberry pi to port 8080 (or some other random port).
 
